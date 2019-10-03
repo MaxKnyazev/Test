@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<input type="submit" value="input[type=&quot;submit&quot;]">
+
+		<input type="reset" value="input[type=&quot;reset&quot;]">
+
+		<input type="button" value="input[type=&quot;button&quot;]">
+
+		<button type="button">button[type="button"]</button>
+
+		<a role="button" href="#">a[role="button"]</a>
+
+		<span role="button" tabindex="0">span[role="button"]</span>
+		
+		<style>	
+			/* Base */
+			body {
+				color: green;
+				font-family: "Georgia", serif;
+				font-size: 24px;
+				line-height: 1.5;
+			}
+
+			[role="button"],
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button {
+				-webkit-box-sizing: content-box;
+				   -moz-box-sizing: content-box;
+						box-sizing: content-box;
+			}
+
+			/* Reset `button` and button-style `input` default styles */
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button {
+				background: none;
+				border: 0;
+				color: inherit;
+				/* cursor: default; */
+				font: inherit;
+				line-height: normal;
+				overflow: visible;
+				padding: 0;
+				-webkit-appearance: button; /* for input */
+				-webkit-user-select: none; /* for button */
+				   -moz-user-select: none;
+					-ms-user-select: none;
+			}
+			input::-moz-focus-inner,
+			button::-moz-focus-inner {
+				border: 0;
+				padding: 0;
+			}
+
+			/* Make `a` like a button */
+			[role="button"] {
+				color: inherit;
+				cursor: default;
+				display: inline-block;
+				text-align: center;
+				text-decoration: none;
+				white-space: pre;
+				-webkit-user-select: none;
+				   -moz-user-select: none;
+					-ms-user-select: none;
+			}
+
+			/* Demo */
+			[role="button"],
+			input[type="submit"],
+			input[type="reset"],
+			input[type="button"],
+			button {
+				background-color: #f0f0f0;
+				order: 1px solid rgb(0, 0, 0);
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-radius: 0.25em;
+				height: 2.5em;
+				line-height: 2.5;
+				margin: 0.25em;
+				padding: 0 1em;
+				width: 14em;
+			}			
+		</style>
+	</body>
+</html>

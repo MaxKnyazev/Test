@@ -1,0 +1,148 @@
+﻿/**
+======================= Текст в кавычках ===================
+    block:before,
+    block:after {
+    content: "“"; /* Левая кавычка */
+    font-size: 40px; /* Размер текста кавычек */
+    color: #c1172c; /* Цвет кавычек */
+    line-height: 0; /* Текст не занимает место */
+   }
+   block:after {
+    content: "”"; /* Правая кавычка */
+   }
+
+======================= Flex ===================
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+======================= Изображения ===================
+
+    background:#0a121b url(Images/header.png) 100% 100% no-repeat;
+    background-size: cover;
+
+--- Адаптивный background----------
+
+    .contact__map {
+    background: #fff url(images/map.png) no-repeat;
+    background-size: contain;
+    background-position: center center;   
+    }
+
+-------------------------------------------------------
+
+	text-align: center;
+    width: 100%;
+    
+    list-style: none;
+
+    background-color: rgba(13, 24, 40, 0.7);
+
+
+			.header__logo::before {
+                content: url(Images/signal.png);
+                position: absolute;
+                right: 62px;
+                top: 0;
+            }        
+
+                    text-transform: uppercase;
+                        border: 2px solid transparent;    
+                        transition: border-top-color 200ms linear;
+			
+            border-radius: 50%;
+
+                    box-shadow: 0px 3px 2px 2px #277697;
+
+                .header-svg {
+                    fill: #ffffff;
+                    transition: fill 200ms linear;
+                }
+                .header-svg:hover {
+                    fill: #4bcaff;
+                }
+
+        .header__btn:first-child {
+            margin-left: 0;
+        }
+				
+        font-weight: bold;
+
+        font-size: 1.5em;
+        font-size: 36px;
+
+        font-family: Lato, Arial, sans-serif;
+
+        --user-select - это нестандартное свойство невыделяемость элементов 
+        --поэтому нужны префиксы 
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+
+**/
+
+/**
+@media (max-width: 492px) {
+    .main-header__content {
+        justify-content: space-around;
+    }
+    .main-header__view {
+        padding: 0;
+    }
+    .main-header__logo {
+        padding: 0;
+    }
+}
+
+-------------------------------
+Вставить в input шрифтовую иконку :
+
+.wrapper input[type="text"] {
+    position: relative;
+}
+
+.wrapper input[type="text"]:before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    content: "\f007";
+}
+
+**/
+
+
+/** .declaration-order {
+  // ==================== Positioning 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  // ==================== Box-model 
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+
+  // ==================== Typography 
+  font: normal 13px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #333;
+  text-align: center;
+
+  // ==================== Visual 
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+
+  // ==================== Misc
+  opacity: 1;
+} 
+**/
+        
+
