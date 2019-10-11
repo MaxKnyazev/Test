@@ -2,7 +2,7 @@ class Worker{
     static count = 0;
     
     constructor(options){
-        // this._age = options.age;
+        //; this._age = options.age;
         this.age = options.age;
         Worker.count++;
     }
