@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Square -- 2</title>
+</head>
+<body>
+    <section id ="app" class="wrapper">
+        <div class="squares mr-3">
+
+        </div>
+
+        <div class="buttons">
+            <button id="start" type="button" class="btn btn-primary">Start</button>
+        </div>
+    </section>
+
+
+    <style>
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .squares {
+                border: 1px solid gray;
+                width: 50vw;
+                height: 50vh;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+                .square {
+                    background-color: red;
+                    /* width: 5rem;
+                    height: 5rem; */
+                    margin: 1rem;
+                }
+    </style>
+
+    <script>
+
+        window.onload = function () {
+
+          class Init {
+            constructor () {
+              // this.app = document.querySelector('#app');
+              this.squares = app.querySelector('.squares');
+              this.start = app.querySelector('#start');
+            }
+          
+            get app () {
+              return document.querySelector('#app');
+            }
+
+            render (temp) {
+              this.squares.appendChild(temp)
+            }
+          }
+
+          const init = new Init ();
+          
+          class Square {
+            constructor (side) {
+              this.side = side
+            }
+
+            createTemplate () {
+              let templateSquare = document.createElement('div');
+              templateSquare.className = "square";
+              templateSquare.style.width = `${this.side}rem`;
+              templateSquare.style.height = `${this.side}rem`;
+              return templateSquare;
+            }
+          }
+
+          class Circle extends Square {
+            constructor (side, radius) {
+              super (side);
+              this.borderRadius = radius;
+            }
+
+            createTemplate () {
+              let templateCircle = super.createTemplate();
+              templateCircle.style.borderRadius = `${this.borderRadius}%`;
+              return templateCircle;
+            }
+          }
+
+          start.addEventListener ('click', function (event) {
+            if (Date.now () % 2 === 0) {
+              init.render(new Square(5).createTemplate());
+            } else {
+              init.render(new Circle(5, 50).createTemplate());
+            }
+         })
+        }
+
+    </script>
+</body>
+</html>
