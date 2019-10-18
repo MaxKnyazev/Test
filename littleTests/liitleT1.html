@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>litleT1</title>
+</head>
+<body>
+  <section class="application">
+    <div class="app">
+      <div class="app__begin">
+        <div class="app__geometry"></div>
+        <div class="app__geometry"></div>
+        <div class="app__geometry"></div>  
+      </div>
+      <div class="app__result">
+        <div class="app__geometry"></div>
+        <div class="app__geometry"></div>
+        <div class="app__geometry"></div>
+      </div>
+    </div>
+    <button class="start">Start...</button>
+  </section>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .application {
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+      .start {
+        width: 20vw;
+        height: 5vw;
+        margin: 1vw;
+      }
+      .app {
+        width: 65vw;
+        height: 80vh;
+        border: 1px solid gray;
+      }
+      .app__begin {
+          display: flex;
+          /* background-color: lawngreen; */
+          height: 40%;
+          align-items: center;
+          justify-content: space-around;
+        }
+        .app__result {
+          display: flex;
+          /* background-color: blue; */
+          height: 40%;
+          align-items: center;
+          justify-content: space-around;
+        }
+          .app__geometry {
+            width: 30%;
+            height: 50%;
+            background: red;
+          }
+  </style>
+</body>
+</html>
