@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>littleT2</title>
+</head>
+<body>
+
+<script>
+console.log('Started...');
+
+class User {
+    age = 21;
+    status = 'guest';
+
+    get status () {
+        // return this._status;
+        return this._;
+    }
+
+    set status (value) {
+        // this._status = value;
+        this._ = value;
+    }
+
+    printData () {
+        return this.status + this.age;
+    }
+}
+
+let user1 = new User();
+let user2 = new User();
+
+console.dir(user1);
+console.dir(user2);
+
+user1.status = 'admin';
+
+console.log(user1.printData());
+    
+</script>
+    
+</body>
+</html>
