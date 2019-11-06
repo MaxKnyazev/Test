@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section class="wrapper">
+        <ul class="clock">
+            <li class="clock--element clock--first"></li>
+            <li class="clock--element clock--second"></li>
+            <li class="clock--element clock--third"></li>
+            <li class="clock--element clock--fourth"></li>
+        </ul>
+    </section>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        li {
+            list-style-type: none;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            background-color: #1e1e1e;
+        }
+
+            .clock--element {
+                width: 100px;
+                height: 120px;
+                background-color: #575757;
+            }
+
+            .clock--first {
+            }
+
+            .clock--second {
+                transform: rotate(90deg);
+                margin-top: -120px;
+            }
+
+            .clock--third {
+                margin-top: -10px;
+            }
+
+            .clock--fourth {
+                transform: rotate(90deg);
+                margin-top: -120px;
+            }
+    </style>
+<script src = "clock.js"></script>
+</body>
+</html>
