@@ -95,12 +95,16 @@
             }
           }
 
-          start.addEventListener ('click', function (event) {
+          function renderNewFigure () {
             if (Date.now () % 2 === 0) {
               init.render(new Square(5).createTemplate());
             } else {
               init.render(new Circle(5, 50).createTemplate());
             }
+          }
+
+          start.addEventListener ('click', function (e) {
+            setTimeout (renderNewFigure, 500)
          })
         }
 

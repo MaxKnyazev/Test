@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>cssGrid -- 1</title>
+</head>
+<body>
+  <div class="container">  
+    <div class="alert-primary">
+      <div class="fl">1</div>
+    </div>
+    <div class="alert-secondary">2</div>
+    <div class="alert-success">3</div>
+    <div class="alert-danger">4</div>
+    <div class="alert-warning">5</div>
+    <div class="alert-info">6</div>  
+  </div>
+
+<!-- Попробовать указать мин.высоту и мин. ширину -->
+
+  <style>
+    .container {
+      border: 1px solid gray;
+      width: 50vw;
+      height: 50vh;  
+      display: grid;  
+      grid-template-columns: 33% 33% 33%;  
+      grid-template-rows: 50% 50%;  
+    }
+
+    .fl {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1px;
+
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      border-radius: 50%;
+    }
+
+    .alert-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</body>
+</html>
