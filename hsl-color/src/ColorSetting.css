@@ -1,0 +1,40 @@
+.Setting__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;  
+
+  margin-top: 3vh;
+}
+
+  .Setting__buttons__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+    .Setting__button {
+      background-color: #fff;
+      border: none;
+      padding: 5px 30px;
+
+      font-size: 50px;
+      color: rgb(73, 0, 107);
+
+      transition: all 250ms linear;
+    }
+
+    .Setting__button:hover {
+      background-color: rgb(175, 89, 255);
+
+      /* padding: 10px 40px; */
+      color: #fff;
+
+      border-radius: 10px;
+    }
+
+    .Setting__value {
+      margin: 0 3vw;
+      min-width: 100px;
+      text-align: center;
+    }
