@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux Count HTM</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
+
+</head>
+<body>
+
+  <h1>Redux Count HTML</h1>
+
+  <div class="count">
+    <button class="btn btn-primary count__sub">-</button>
+    <span class="alert alert-primary count__cnt">0</span>
+    <button class="btn btn-primary count__add">+</button>
+  </div>
+
+  <script>
+
+    //---------------------------------ACTIONS
+    const addCount = () => ({
+        type: 'ADD',
+        count: 1,
+      });
+
+    const subCount = () => ({
+        type: 'SUB',
+        count: 1,
+      });
+
+    //----------------------------------REDUCERS
+    function reduceCount(state, action) {
+      if (state === undefined) {
+        state = 0;
+      }
+
+      if (action.type === 'ADD') {
+        return state + action.count;
+      } 
+
+      if (action.type === 'SUB') {
+        return state - action.count;
+      }
+      
+      return state;
+    }
+
+    //-------------------------------------STORE
+    let store = Redux.createStore(reduceCount);
+
+    //---------------------------------subscribe
+    const render = () => {
+      console.log(store.getState());
+    }
+
+    store.subscribe(render);
+
+    //----------------------------------dispatch
+    const sub = document.querySelector('.count__sub');
+    const cnt = document.querySelector('.count__cnt');
+    const add = document.querySelector('.count__add');
+
+    sub.addEventListener('click', () => {
+      store.dispatch(subCount());
+      cnt.innerHTML = store.getState().toString();
+    })
+
+    add.addEventListener('click', () => {
+      store.dispatch(addCount());
+      cnt.innerHTML = store.getState().toString();
+    })
+
+  </script>
+  
+</body>
+</html>
