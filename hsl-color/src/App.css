@@ -66,8 +66,12 @@
         text-decoration: none;
         border: 3px solid #fff;
 
+<<<<<<< HEAD
         padding: 1vmin 5vmin;
         font-size: 2rem;
+=======
+        padding: 2vmin 3vmin;
+>>>>>>> 1959c89738a316a5bc7a111c1232887f928aed96
 
         transition: all 250ms linear;
       }
