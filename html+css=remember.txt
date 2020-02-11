@@ -144,5 +144,10 @@
   opacity: 1;
 } 
 **/
+
+button {
+  cursor: pointer;
+  outline: none;
+}
         
 
