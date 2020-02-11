@@ -1,19 +1,32 @@
 .App {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  
+  /* align-items: center; */
+
   height: 100vh;
 
-  font-size: 40px;
+  /* font-size: 40px; */
   color: #fff;
-  background-color: rgb(73, 0, 107); 
+  background-color: rgb(73, 0, 107);
 }
 
+  .App__wrapper {
+    border: 1px solid yellow;
+    max-width: 98vmin;
+    width: 90vmin;
+    min-width: 300px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    /*width: 20vw; */
+  }
+
   .App__square {
-    width: 40vh;
-    height: 40vh;
+    width: 75vmin;
+    height: 75vmin;
     
     background-color: #fff;
     border: 3px solid #fff;
@@ -28,43 +41,57 @@
       border-radius: 20px;
     }
 
-  .App__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-
-    margin-top: 5vh;
+  .App__nav {
+    /* max-width: 80vmin;
+    width: 80vmin;
+    min-width: 300px; */
+    /* width: 100%; */
+    
   }
 
-    .App__link {
-      color: #fff;
-      text-decoration: none;
-      border: 3px solid #fff;
+    .App__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
 
-      margin: 1vw;
-      padding: 10px 30px;
+      width: 75vmin;
 
-      transition: all 250ms linear;
+
+      /* margin-top: 5vh; */
     }
 
-    .App__link:hover {
-      background-color: #fff;
-      color: rgb(73, 0, 107); 
+      .App__link {
+        color: #fff;
+        text-decoration: none;
+        border: 3px solid #fff;
 
-      border-radius: 10px;
-    }
+        padding: 2vmin 3vmin;
 
-    .App__link.active {
-      background-color: rgb(175, 89, 255);
-      border: 3px solid rgb(175, 89, 255);
+        transition: all 250ms linear;
+      }
+/*
+      .App__link:hover {
+        background-color: #fff;
+        color: rgb(73, 0, 107); 
 
-    }
+        border-radius: 10px;
+      }
 
-    .App__link.active:hover {
-      color: #fff;
-      border: 3px solid rgb(175, 89, 255);
+      .App__link.active {
+        background-color: rgb(175, 89, 255);
+        border: 3px solid rgb(175, 89, 255);
 
-      border-radius: 10px;
-      /* border-bottom: 7px solid rgb(184, 5, 255); */
-    }
+      }
+
+      .App__link.active:hover {
+        color: #fff;
+        border: 3px solid rgb(175, 89, 255);
+
+        border-radius: 10px;
+        /* border-bottom: 7px solid rgb(184, 5, 255); */
+
+      /* }  */
+
+
+/* -------------------- MEDIA: -------------------- */

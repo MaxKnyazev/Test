@@ -5,6 +5,7 @@ const ColorRange = (props) => {
   console.log(props);
 
   const {value, MIN, MAX, STEP} = props;
+  
 
   return (
     <input 
@@ -13,7 +14,7 @@ const ColorRange = (props) => {
       min={MIN} 
       max={MAX} 
       step={STEP}
-      defaultValue={value}
+      value={value}
       onChange={props.changeRange}
     />
   )
