@@ -27,6 +27,8 @@
   .App__square {
     width: 75vmin;
     height: 75vmin;
+    max-width: 500px;
+    max-height: 500px;
     
     background-color: #fff;
     border: 3px solid #fff;
@@ -46,6 +48,7 @@
     width: 80vmin;
     min-width: 300px; */
     /* width: 100%; */
+    margin-top: 2rem;
     
   }
 
@@ -66,16 +69,12 @@
         text-decoration: none;
         border: 3px solid #fff;
 
-<<<<<<< HEAD
-        padding: 1vmin 5vmin;
-        font-size: 2rem;
-=======
-        padding: 2vmin 3vmin;
->>>>>>> 1959c89738a316a5bc7a111c1232887f928aed96
+        padding: 1vmax 3vmax;
+        font-size: 5vmax;
 
         transition: all 250ms linear;
       }
-/*
+
       .App__link:hover {
         background-color: #fff;
         color: rgb(73, 0, 107); 
@@ -96,7 +95,7 @@
         border-radius: 10px;
         /* border-bottom: 7px solid rgb(184, 5, 255); */
 
-      /* }  */
+       }  
 
 
 /* -------------------- MEDIA: -------------------- */

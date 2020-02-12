@@ -12,12 +12,8 @@
 
 .Setting__wrapper h1 {
     text-align: center;
-<<<<<<< HEAD
     /* margin-bottom: 3vmin; */
-    font-size: 3rem;
-=======
-    margin-bottom: 3vmin;
->>>>>>> 1959c89738a316a5bc7a111c1232887f928aed96
+    font-size: 8vmax;
   }
 
   .Setting__buttons__wrapper {
@@ -25,7 +21,7 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
     width: 100%;
   }
 
@@ -36,7 +32,6 @@
 
       font-size: 50px;
       color: rgb(73, 0, 107);
-<<<<<<< HEAD
       */
       transition: all 250ms linear;
 
@@ -52,27 +47,12 @@
     }
 
     .Setting__button svg {
-      width: 50%;
+      width: 30%;
       color: rgb(73, 0, 107);
-=======
+      transition: all 250ms linear;
 
-      transition: all 250ms linear; */
-
-      margin: 0;
-      padding: 0;
-      width: 20vmin;
-      height: 20vmin;
-      display: flex;
-      justify-content: center;
-      align-items: center;
->>>>>>> 1959c89738a316a5bc7a111c1232887f928aed96
     }
 
-    .Setting__button svg {
-      width: 75%;
-      color: rgb(73, 0, 107);
-    }
-/*
     .Setting__button:hover {
       background-color: rgb(175, 89, 255);
       color: #fff;
@@ -84,16 +64,8 @@
     }
 
     .Setting__value {
-<<<<<<< HEAD
       /* margin: 0 3vw;
       min-width: 5vmax;
       text-align: center; */
-
-      font-size: 2.5rem;
+      font-size: 5vmax;
     }
-=======
-      margin: 0 3vw;
-      min-width: 5vmax;
-      text-align: center;
-    } */
->>>>>>> 1959c89738a316a5bc7a111c1232887f928aed96
