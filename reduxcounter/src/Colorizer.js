@@ -6,7 +6,7 @@ const Colorizer = (props) => {
     const styleWrapper = {
           backgroundColor : `rgb(${RValue}, ${GValue}, ${BValue})`,
           width: '75vmin',
-          height: '50vmin',
+          height: '25vmin',
         };
     const styleButton = {margin: '30px', padding: '30px', fontSize: '3vmin'}
 

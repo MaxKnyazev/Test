@@ -9,7 +9,8 @@ function reducer(state, action) {
       B: 0,
     };
   }
-  console.log(state)
+
+  console.log('state-->',state);
 
   switch (action.type) {
     case 'increase': 
