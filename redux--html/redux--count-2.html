@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux Count HTML</title>
+  <script src="https://unpkg.com/redux@latest/dist/redux.js"></script>
+
+</head>
+<body>
+
+  <h1>Redux Count--2 HTML</h1>
+
+  <script>
+
+    //---------------------------------ACTIONS
+    const addCount = {
+        type: 'ADD'
+      };
+
+    const subCount = () => ({
+        type: 'SUB_NUMBER',
+        count: 2,
+      });
+
+    //----------------------------------REDUCERS
+    const initialState = {
+      count : 0
+    }
+
+    const reducer = (state = initialState, action) => {
+      if (action.type === 'ADD') {
+        return {
+          count : state.count + 1
+        }
+      } 
+
+      if (action.type === 'SUB_NUMBER') {
+        return {
+          count : state.count - action.count
+        }
+      }
+      
+      return state;
+    }
+
+    //-------------------------------------STORE
+    let store = Redux.createStore(reducer);
+
+    //---------------------------------subscribe
+    store.subscribe(() => {
+      console.log(store.getState());
+    });
+
+    //----------------------------------dispatch
+    store.dispatch(addCount);   //1
+    store.dispatch(subCount()); //-1
+
+  </script>
+  
+</body>
+</html>

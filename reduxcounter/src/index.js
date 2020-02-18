@@ -18,6 +18,7 @@ const destination = document.querySelector('#root');
 //STORE          
 const store = createStore(reducer);
 
+
 ReactDOM.render(
   <Provider store={store}>
     <AppCounter />
