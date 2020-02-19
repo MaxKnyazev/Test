@@ -1,14 +1,12 @@
-//REDUCER         
-function reducer(state, action) {
-
-  if (state === undefined) {
-    return {
+const initialState = {
       count: 0,
       R: 0,
       G: 0,
       B: 0,
     };
-  }
+
+//REDUCER         
+function reducer(state = initialState, action) {
 
   console.log('state-->',state);
 

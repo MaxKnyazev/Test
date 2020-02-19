@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 const Colorizer = (props) => {
 
@@ -28,4 +29,34 @@ const Colorizer = (props) => {
     );
 }
 
-export default Colorizer;
+//ACTIONS         
+const addR = {type: 'ADD_R'};
+const addG = {type: 'ADD_G'};
+const addB = {type: 'ADD_B'};
+
+//сопоставление состояния Redux со свойствами компонента
+function mapStateToProps(state) {
+  return {
+    RValue: state.R,
+    GValue: state.G,
+    BValue: state.B,
+  };
+}
+
+//сопоставление действий Redux со свойствами компонента
+function mapDispatchToProps(dispatch) {
+  return {
+    addR: function() {
+      return dispatch(addR);
+    },
+    addG: function() {
+      return dispatch(addG);
+    },
+    addB: function() {
+      return dispatch(addB);
+    }
+  };
+}
+
+// HOC----------
+export default connect(mapStateToProps, mapDispatchToProps)(Colorizer);

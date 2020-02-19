@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 class Counter extends Component {
-  
   render() {
     const {decreaseCount, countValue, increaseCount} = this.props;
     return (
