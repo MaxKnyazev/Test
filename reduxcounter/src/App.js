@@ -5,6 +5,7 @@ import reducer from './reducer';
 
 import Counter from './Counter';
 import Colorizer from './Colorizer';
+import Resizer from './Resizer';
 
 console.log('***AppCounter');
 console.log(Counter);
@@ -17,7 +18,10 @@ const store = createStore(reducer);
 export default (  
   <Provider store={store}>
     <Counter />
+    <hr/>
     <Colorizer />
+    <hr/>
+    <Resizer />
   </Provider>
 )
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>testAdaptiveImg</title>
+</head>
+<body>
+<!-- ----------------------------------------------  container     -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 1rem auto;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 96%;
+            max-width: 960px;
+            background-color: #eee;
+            margin: 0 auto;
+        }
+    </style>
+    <main class="container">
+<!-- -------------------------------------------------    adaptive1 -->
+        <style>
+            .adaptive1 {
+                background-color: wheat;
+            }
+                .adaptive1-title {                    
+                    text-align: center;
+                }
+                .adaptive1-img {
+                    display: block;
+                    max-width: 100%; /* 1-е главное свойство */
+                    height: auto;    /* 2-е главное свойство */                   
+                    min-width: 15rem; /* 240px */
+                }
+        </style>
+        <section class="adaptive1">
+            <h1 class="adaptive1-title">Пример № 1 : Адаптивноcть одиночного изображения, НЕ обтекаемое текстом</h1>
+            <p class="adaptive1-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+            <img class="adaptive1-img" src="img/cabin-1082063_1280.jpg" alt="adaptive1" width="1280">            
+            <p class="adaptive1-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+        </section>
+<!-- -------------------------------------------------    adaptive2 -->
+        <style>
+            .adaptive2 {
+                background-color: powderblue;
+            }
+                .adaptive2-title {                    
+                    text-align: center;
+                }
+                .adaptive2-img {
+                    float: left;
+                    margin: 0 1rem 1rem 0;
+
+                    /* width: 60%; */
+                    max-width: 60%; /* 1-е главное свойство */
+                    height: auto;    /* 2-е главное свойство */                   
+                    min-width: 15rem;/* 240px */
+
+                }
+            @media (max-width: 480px) {
+                .adaptive2-img {
+                    float: none;
+                    display: block;
+                    max-width: 100%;
+                    margin: 1rem auto;
+                }
+            }
+        </style>
+        <section class="adaptive2">
+            <h1 class="adaptive2-title">Пример № 2 : Адаптивноcть одиночного изображения, обтекаемое текстом</h1>
+            <p class="adaptive2-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+            <p class="adaptive2-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+            <img class="adaptive2-img" src="img/dna-3539309_640.jpg" alt="adaptive2" width="640">            
+            <p class="adaptive2-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+            <p class="adaptive2-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+            <p class="adaptive2-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+            <p class="adaptive2-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod quo labore doloribus. Facere ea architecto, iusto vero error quas quaerat? Minus perspiciatis possimus sequi culpa sunt reiciendis enim corporis magnam.
+            </p>
+        </section>
+<!-- -------------------------------------------------    adaptive3 -->
+<!-- -------------------------------------------------    adaptive4 -->
+<!-- -------------------------------------------------    adaptive5 -->
+<!-- -------------------------------------------------    adaptive6 -->
+<!-- -------------------------------------------------    adaptive7 -->
+            
+    </main>
+    
+</body>
+</html>
