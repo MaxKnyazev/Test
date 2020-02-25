@@ -1,18 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const StyledSpan = styled.span`
-  font-size: 5vmax;
-
-  @media (min-width: 1100px) {
-    font-size: 5rem;
-  }
-`;
+import './ColorValue.css';
 
 const ColorValue = ({value}) => {
   return (
-    <StyledSpan>{value}</StyledSpan>
+    <span className='ColorValue' >
+      {value}
+    </span>
   )
-} 
+}
 
 export default ColorValue;

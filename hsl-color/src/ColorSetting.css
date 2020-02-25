@@ -1,0 +1,66 @@
+.Setting__wrapper {
+  width: 75vmin;
+}
+
+.Setting__wrapper h1 {
+  text-align: center;
+  font-size: 8vmax;
+}
+
+  .Setting__buttons__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1vh;
+    width: 100%;
+  }
+
+    /* .Setting__button {
+      transition: all 250ms linear;
+      max-width: 130px;
+      max-height: 130px;
+      margin: 0;
+      padding: 0;
+      width: 15vmin;
+      height: 15vmin;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+
+    }
+
+    .Setting__button svg {
+      width: 30%;
+      color: rgb(73, 0, 107);
+      transition: all 250ms linear;
+
+    }
+
+    .Setting__button:hover {
+      background-color: rgb(175, 89, 255);
+      color: #fff;
+      border-radius: 10px;
+    }
+
+    .Setting__button:hover svg {
+      color: #fff;
+    } */
+
+    .Setting__value {
+      font-size: 5vmax;
+    }
+
+/* -------------------- MEDIA: -------------------- */
+
+@media (min-width: 1100px) {
+  
+  .Setting__wrapper h1 {
+    font-size: 7rem;
+  }
+  
+  .Setting__value {
+    font-size: 5rem;
+  }
+}

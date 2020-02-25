@@ -1,0 +1,31 @@
+.Setting__button {
+  transition: all 250ms linear;
+  max-width: 130px;
+  max-height: 130px;
+  margin: 0;
+  padding: 0;
+  width: 15vmin;
+  height: 15vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+}
+
+.Setting__button svg {
+  width: 30%;
+  color: rgb(73, 0, 107);
+  transition: all 250ms linear;
+
+}
+
+.Setting__button:hover {
+  background-color: rgb(175, 89, 255);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.Setting__button:hover svg {
+  color: #fff;
+}
