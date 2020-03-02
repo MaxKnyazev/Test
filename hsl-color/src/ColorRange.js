@@ -1,9 +1,7 @@
 import React from 'react';
 import './ColorRange.css';
 
-const ColorRange = (props) => {
-  const {value, MIN, MAX, STEP, changeRange} = props;
-
+const ColorRange = ({value, MIN, MAX, STEP, changeRange}) => {
   return (
     <input 
       className='ColorRange'
