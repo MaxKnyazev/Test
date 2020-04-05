@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Iterators--2</title>
+</head>
+<body>
+
+  <form id="myForm">
+    Первый пример: нажмите Enter: <input type="text" value="Текст"><br>
+    Второй пример: нажмите на кнопку "Отправить": <input type="submit" value="Отправить">
+  </form>
+
+  <form>
+      <input type="text" />
+      <input type="submit" value="ok" /> 2+2 = ?
+  </form>
+
+  
+  <!-- <script type="text/javascript">
+    window.onload = function(){
+
+      // document.forms[0].onsubmit = function(event){
+      //     console.log('form--0');
+      //     console.dir(event);
+      //     console.log(event.target.elements[0].value);
+      //     return false;
+      //   };
+
+        const myForm = document.querySelector('#myForm');
+        console.dir(myForm);
+
+        // myForm.onsubmit = function(event){
+        //   console.log('form--0');
+        //   console.dir(event);
+        //   console.log(event.target.elements[0].value);
+        //   return false;
+        // };
+
+        myForm.addEventListener('submit', (event) => {
+          console.log('form--0');
+          console.dir(event);
+          console.log(event.target.elements[0].value);
+          event.preventDefault();
+          // return false;
+        });
+
+      document.forms[1].onsubmit = function(){
+          console.log('form--1');
+          if(this.elements[0].value == 4) return true;
+          return false;
+        };
+
+    };
+    </script> -->
+     
+  
+  <script src="index2.js"></script>
+</body>
+</html>
+
+
+  
