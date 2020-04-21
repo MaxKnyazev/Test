@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgba(32, 32, 32, 1);
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.BS {
+  max-width: 100vmin;
+  max-height: 100vmin;
+
+  border: 2px solid red;
+  background-color: #e5e5e5;
+}
+
+  .BSHeader__title {
+    text-align: center;
+    margin: calc(10px + 2vmin) 0;
+  }
+  .BSHeader__task {
+    font-size: calc(14px + 0.5vmin);
+    margin: 0.5vmin calc(10px + 2vmin);
+  }
+
+.BSCalc {
+  display: flex;
+  justify-content: space-around;
+  margin: 7vmin 0;
+}
+  .BSCalc__info { 
+    width: 20vmin;
+    /* border: 2px solid rgba(32, 32, 32, 1); */
+    font-size: calc(14px + 3vmin);
+    display: inline-block;
+    text-align: center;
+    color: red;
+    /* opacity: 0; */
+    transition: opacity 200ms linear;
+
+  }
+  .BSCalc__input { 
+    width: 10vmin;
+    border: 2px solid rgba(32, 32, 32, 1);
+    font-size: calc(14px + 2vmin);
+    display: inline-block;
+    background-color: inherit;
+  }
+  .BSCalc__calc {
+    background: none;
+    border: 2px solid red;
+    padding: 1vmin;
+    color: red;
+    font-size: calc(14px + 1vmin);
+    cursor: pointer;
+    transition: background-color 200ms linear, color 200ms linear;
+  }
+    .BSCalc__calc:hover {
+      background-color: red;
+      color: #ffffff;
+    }
+
+.BSResult {
+  margin-bottom: 2vmin;
+}
+  .BSResult__countGroup {
+    text-align: center;
+    font-size: calc(14px + 3vmin);
+
+  }
+    .BSResult__text {
+      font-size: calc(14px + 1.5vmin);
+
+    }
+    .BSResult__count {
+      font-size: calc(14px + 3vmin);
+
+    }
+    .BSResult__message {
+      text-align: center;
+      font-size: calc(14px + 3vmin);
+      color: red;
+      /* opacity: 0; */
+
+    }
