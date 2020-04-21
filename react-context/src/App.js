@@ -3,32 +3,9 @@ import './App.css';
 
 const ColorContext = React.createContext('black');
 
-function Mops () {
-  // static contextType = ColorContext;
-
-  return (
-    <ColorContext.Consumer>
-    {(color) => (
-      <div className = 'Mops' style = {{color}}>Mops</div>
-    )}
-    </ColorContext.Consumer>
-  )
-}
-Mops.contextType = ColorContext;
-
 // ВНИМАНИЕ: contextType зарезервирован
-class Dog extends React.Component {
-  
-  render() {
-    return (
-      <div className = 'Dog'>
-        Dog
-        <Mops/>
-      </div>
-    )
-  }
-}
-
+// для использования в классовых компонентах
+// Разобраться!!!
 class Animal extends React.Component {
   state = {
     color: 'red',
@@ -44,10 +21,38 @@ class Animal extends React.Component {
   }
 }
 
+class Dog extends React.Component {
+  
+  render() {
+    return (
+      <div className = 'Dog'>
+        Dog
+        <Mops/>
+      </div>
+    )
+  }
+}
+
+function Mops () {
+  // вариант 1 : статическое поле класса
+  // static contextType = ColorContext;
+
+  return (
+    <ColorContext.Consumer>
+    {(color) => (
+      <div className = 'Mops' style = {{color}}>Mops</div>
+    )}
+    </ColorContext.Consumer>
+  )
+}
+// вариант 2, то же самое, что и вариант 1
+// но в функциональном стиле
+// Mops.contextType = ColorContext;
+
 function App() {
   return (
     <div className='App'>
-      <ColorContext.Provider value = 'red'>
+      <ColorContext.Provider value = 'orange'>
         <Animal />
       </ColorContext.Provider>
     </div>
