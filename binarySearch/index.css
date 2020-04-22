@@ -11,6 +11,10 @@ body {
   justify-content: center;
 }
 
+.none {
+  opacity: 0;
+}
+
 .BS {
   max-width: 100vmin;
   max-height: 100vmin;

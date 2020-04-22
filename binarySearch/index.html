@@ -13,20 +13,20 @@
       <h1 class="BSHeader__title">Binary Search</h1>
       <p class="BSHeader__task">Загадано целое цисло в диапазоне от 1 до 100.</p>
       <p class="BSHeader__task">Постарайтесь угадать это число за минимальное количество попыток.</p>
-      <p class="BSHeader__task">Удачи!</p>
+      <p class="BSHeader__task">Лучшее количество попыток: <span id="bestResult"></span></p>
     </header>
     <section class="BSCalc">
-      <span class="BSCalc__info">Мало!</span>
+      <span id="few" class="BSCalc__info none">Мало!</span>
       <input class="BSCalc__input" type="number" min="1" max="100" step="1" placeholder="0">
       <button class="BSCalc__calc">Проверить!</button>
-      <span class="BSCalc__info">Много!</span>
+      <span id="many" class="BSCalc__info none">Много!</span>
     </section>
     <section class="BSResult">
       <div class="BSResult__countGroup">
         <span class="BSResult__text">Количество попыток :</span>
         <span class="BSResult__count">0</span>
       </div>
-      <p class="BSResult__message">Правильно!</p>
+      <p id="correct" class="BSResult__message none">Правильно!</p>
     </section>  
   </main>
 
