@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgba(32, 32, 32, 1);
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.none {
+  opacity: 0;
+}
+
+.BS {
+  max-width: 100vmin;
+  max-height: 100vmin;
+
+  border: 2px solid red;
+  background-color: #e5e5e5;
+}
+
+  .BSHeader__title {
+    text-align: center;
+    margin: calc(10px + 2vmin) 0;
+  }
+  .BSHeader__task {
+    font-size: calc(14px + 0.5vmin);
+    margin: 0.5vmin calc(10px + 2vmin);
+  }
+
