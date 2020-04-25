@@ -6,6 +6,9 @@ import CountTries from './CountTries';
 class App extends React.Component {
   state = {
     count : 0,
+    few : false,
+    many : false,
+    correct : false,
   }
 
   bestResult = localStorage.getItem('game');//??? занести в стейт? как в статье?
@@ -15,15 +18,45 @@ class App extends React.Component {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
   }
-  
-//TODO: Доабвить три флага в state для компонентов, которые будут скрываться и появляться на странице.
+
+  num = this.randomInteger(1, 99);
+  inputValue = '0';
+
+  onInputChange = (e) => {
+    this.inputValue = e.target.value;
+  }
 
   onChooseClick = () => {
     this.setState((prevState) => {
       return {
         count : prevState.count + 1,
+        few : false,
+        many : false,
+        correct : false,
       }
     })
+
+    if (this.num === +this.inputValue) {
+      this.setState({
+        correct : true,
+      });
+
+      if (this.bestResult > this.state.count) {
+        localStorage.setItem('game', this.state.count + 1)
+      }
+    }
+
+    if (this.num < +this.inputValue) {
+      this.setState({
+        many : true,
+      });
+    }
+
+    if (this.num > +this.inputValue) {
+      this.setState({
+        few : true,
+      });
+    }
   }
 
   componentDidMount () {
@@ -31,7 +64,6 @@ class App extends React.Component {
   }
 
   render () {
-    const num = this.randomInteger(1, 99);//???????????????????? 
     return (
       <main className='BS'>
         <header className='BSHeader'>
@@ -41,9 +73,9 @@ class App extends React.Component {
           <p className='BSHeader__task'>Лучшее количество попыток: <span id='bestResult'>{this.bestResult}</span></p>
         </header>
 
-        <ChooseNumber onChooseClick={this.onChooseClick}/>
+        <ChooseNumber onInputChange={(e) => this.onInputChange(e)} few={this.state.few} many={this.state.many} onChooseClick={this.onChooseClick}/>
 
-        <CountTries count = {this.state.count}/>
+        <CountTries correct={this.state.correct} count = {this.state.count}/>
       </main>
     );
   }

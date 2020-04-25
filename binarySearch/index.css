@@ -9,6 +9,8 @@ body {
   font-family: Roboto, sans-serif;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .none {
@@ -92,3 +94,33 @@ body {
       /* opacity: 0; */
 
     }
+
+
+
+
+
+.main__buttons {
+  height: 30vh;
+  background-color: rgb(189, 189, 189);
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* text-align: center; */
+}
+
+  .main__btn {
+    /* float: left; */
+    border: none;
+    background-color: rgb(255, 226, 226);
+    width: 5vw;
+    height: 5vw;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main__btn:hover {
+    background-color: red;
+  }

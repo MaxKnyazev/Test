@@ -1,13 +1,16 @@
 import React from 'react';
 import './ChooseNumber.css';
 
-const ChooseNumber = ({onChooseClick}) => {
+const ChooseNumber = ({onInputChange, onChooseClick, few, many}) => {
+  const fewClasses = few ? 'BSCalc__info' : 'BSCalc__info none';
+  const manyClasses = many ? 'BSCalc__info' : 'BSCalc__info none';
+
   return (
     <section className='BSCalc'>
-      <span id='few' className='BSCalc__info none'>Мало!</span>
-      <input className='BSCalc__input' type='number' min='1' max='100' step='1' placeholder='0' />
+      <span id='few' className={fewClasses}>Мало!</span>
+      <input onChange={onInputChange} className='BSCalc__input' type='number' min='1' max='100' step='1' placeholder='0' />
       <button onClick={onChooseClick} className='BSCalc__calc'>Проверить!</button>
-      <span id='many' className='BSCalc__info none'>Много!</span>
+      <span id='many' className={manyClasses}>Много!</span>
     </section>
   )
 }

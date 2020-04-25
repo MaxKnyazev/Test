@@ -1,0 +1,276 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: calc(12px + 1vmin);
+
+}
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+
+}
+.todo {
+  width: 75vmin;
+  height: 100vmin;
+  /* background-color: #c0bec226; */
+
+  /* border: 1px dotted gray; */
+
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.header__title {
+  color: #050505;
+  font-size: calc(14px + 3vmin);
+}
+
+.header__number {
+  /* font-size: calc(14px + 2vmin); */
+  font-weight: bold;
+}
+.header__text {
+  font-size: calc(14px + 2vmin);
+  color: #050505;
+}
+.header__number.header__number--more {
+  color: crimson;
+  font-size: calc(14px + 3vmin);
+
+  }
+  .header__number.header__number--done{
+    color: blueviolet;
+    font-size: calc(14px + 3vmin);
+    margin-left: 1vmin;
+
+  }
+
+/* ItemAddForm component */
+.add {
+  margin: 4vmin 0;
+
+}
+.add__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* font-size: calc(14px + 2vmin); */
+
+}
+.add__input {
+  padding: 1vmin;
+  width: 70%;
+  border: 2px solid #050505;
+}
+.add__btn {
+  padding: 1vmin;
+  width: 29%;
+  background: transparent;
+  border: 2px solid crimson;
+  color: crimson;
+  cursor: pointer;
+
+  transition: background-color 200ms ease-out, color 200ms ease-out;
+
+}
+.add__btn:hover {
+  color: #fff;
+  background-color: crimson;
+}
+
+
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vmin 0;
+}
+.search__input {
+  padding: 1vmin;
+  width: 70%;
+  border-top: 2px solid #050505;
+  border-bottom: 2px solid #050505;
+  border-left: none;
+  border-right: none;
+  background-color: #607d8b1a;
+}
+
+/* ----------------- Filter -------------- */
+
+.filter {
+  border-top: 2px solid crimson;
+  width: 29%;
+  border-bottom: 2px solid crimson;
+  background-color: #607d8b1a;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter__btn {
+  padding: 1.2vmin 0;
+  width: 20%;
+  background: transparent;
+  border: none;
+  color: crimson;
+  cursor: pointer;
+  /* float: left; */
+  transition: background-color 200ms ease-out, color 200ms ease-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .filter__svg {
+    width: calc(10px + 1vmin);
+    height: calc(10px + 1vmin);
+  }
+  
+  .filter__btn.filter__btn--all { color: crimson; }
+  .filter__btn.filter__btn--all:hover { color: #fff; background-color: crimson; }
+  .filter__btn.filter__btn--all:focus { color: #fff; background-color: crimson; }
+
+  .filter__btn.filter__btn--active { color: fuchsia; }
+  .filter__btn.filter__btn--active:hover { color: #fff; background-color: fuchsia; }
+  .filter__btn.filter__btn--active:focus { color: #fff; background-color: fuchsia; }
+
+  .filter__btn.filter__btn--done { color: blueviolet; }
+  .filter__btn.filter__btn--done:hover { color: #fff; background-color: blueviolet; }
+  .filter__btn.filter__btn--done:focus { color: #fff; background-color: blueviolet; }
+
+  .filter__btn.filter__btn--important { color: chocolate; }
+  .filter__btn.filter__btn--important:hover { color: #fff; background-color: chocolate; }
+  .filter__btn.filter__btn--important:focus { color: #fff; background-color: chocolate; }
+
+  .filter__btn.filter__btn--vital { color: red; }
+  .filter__btn.filter__btn--vital:hover { color: #fff; background-color: red; }
+  .filter__btn.filter__btn--vital:focus { color: #fff; background-color: red; }
+
+
+ /* ============== TodoList ========== */
+.list {
+
+}
+
+.list__item {
+  list-style: none;
+  padding: 0.5vmin 0;
+  border-bottom: 1px solid #050505;
+  margin: 2px 0;
+  transition: box-shadow 200ms ease-out;  
+
+}
+.list__item:hover {
+  box-shadow: 0 0 12px 7px rgba(0,0,0,0.15);
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 4px;
+  /* padding: 1vmin 0; */
+  /* border: 2px solid #050505; */
+  /* margin: 2px 0; */
+
+}
+
+.item__btn {
+  margin-right: 2vmin;
+  /* padding: 1vmin 0; */
+  /* width: 25%; */
+  /* background: transparent;
+  width: 30px;
+  height: 30px; */
+
+  /* display: block; */
+  /* margin: auto; */
+
+  /* border: 2px solid crimson;
+  color: crimson; */
+  cursor: pointer;
+  /* float: left; */
+  transition: color 200ms ease-out;  
+}
+
+.item__svg {
+  width: calc(10px + 1.5vmin);
+  height: auto;
+}
+
+.item__btn:hover {
+  /* color: #fff;
+  background-color: crimson; */
+}
+
+
+.item__btn.item__btn--important {
+  color: chocolate;
+}
+
+.item__btn.item__btn--important:hover {
+  color: gray;
+}
+.item__btn.item__btn--vital {
+  color: red;
+  /* transition: background 200ms ease-out, color 200ms ease-out; */
+}
+
+.item__btn.item__btn--vital:hover {
+  color: gray;
+}
+.item__btn.item__btn--delete {
+  color: #050505;
+  /* transition: background 200ms ease-out, color 200ms ease-out; */
+}
+
+.item__btn.item__btn--delete:hover {
+  color: gray;
+}
+
+
+/* color: #e15c08; */
+ 
+
+/* svg {
+  width: 2vmin;
+  height: 2vmin;
+  color: blueviolet;
+} */
+
+/* Кнопка DELETE */
+.todo__btn.todo__btn--delete {
+  border: 2px solid blueviolet;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4vmin;
+  height: 4vmin;
+  color: blueviolet;
+
+  transition: background 200ms ease-out, color 200ms ease-out;
+
+}
+
+.todo__btn.todo__btn--delete:focus {
+  background-color: rgb(227, 200, 251);
+}
+
+
+
+/* box-shadow: 0 0 12px 6px rgba(0,0,0,0.1); */
+
