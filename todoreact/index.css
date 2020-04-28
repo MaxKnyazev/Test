@@ -119,7 +119,7 @@ body {
 
 .filter__btn {
   padding: 1.2vmin 0;
-  width: 20%;
+  width: 25%;
   background: transparent;
   border: none;
   color: crimson;
@@ -149,13 +149,13 @@ body {
   .filter__btn.filter__btn--done:hover { color: #fff; background-color: blueviolet; }
   .filter__btn.filter__btn--done:focus { color: #fff; background-color: blueviolet; }
 
-  .filter__btn.filter__btn--important { color: chocolate; }
-  .filter__btn.filter__btn--important:hover { color: #fff; background-color: chocolate; }
-  .filter__btn.filter__btn--important:focus { color: #fff; background-color: chocolate; }
+  .filter__btn.filter__btn--important { color: red; }
+  .filter__btn.filter__btn--important:hover { color: #fff; background-color: red; }
+  .filter__btn.filter__btn--important:focus { color: #fff; background-color: red; }
 
-  .filter__btn.filter__btn--vital { color: red; }
+  /* .filter__btn.filter__btn--vital { color: red; }
   .filter__btn.filter__btn--vital:hover { color: #fff; background-color: red; }
-  .filter__btn.filter__btn--vital:focus { color: #fff; background-color: red; }
+  .filter__btn.filter__btn--vital:focus { color: #fff; background-color: red; } */
 
 
  /* ============== TodoList ========== */
@@ -218,20 +218,20 @@ body {
 
 
 .item__btn.item__btn--important {
-  color: chocolate;
+  color: red;
 }
 
 .item__btn.item__btn--important:hover {
   color: gray;
 }
-.item__btn.item__btn--vital {
+/* .item__btn.item__btn--vital {
   color: red;
-  /* transition: background 200ms ease-out, color 200ms ease-out; */
 }
 
 .item__btn.item__btn--vital:hover {
   color: gray;
-}
+}  */
+
 .item__btn.item__btn--delete {
   color: #050505;
   /* transition: background 200ms ease-out, color 200ms ease-out; */
