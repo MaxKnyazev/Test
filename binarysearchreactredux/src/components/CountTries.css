@@ -1,0 +1,23 @@
+.BSResult {
+  margin-bottom: 2vmin;
+}
+  .BSResult__countGroup {
+    text-align: center;
+    font-size: calc(14px + 3vmin);
+
+  }
+    .BSResult__text {
+      font-size: calc(14px + 1.5vmin);
+
+    }
+    .BSResult__count {
+      font-size: calc(14px + 3vmin);
+
+    }
+    .BSResult__message {
+      text-align: center;
+      font-size: calc(14px + 3vmin);
+      color: red;
+      /* opacity: 0; */
+
+    }
