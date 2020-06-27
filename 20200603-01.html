@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 50vw;
+            height: 40vh;
+            background-color: #eee;
+            flex-wrap: wrap;
+
+            margin-bottom: 40px;
+        }
+
+        .delete-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 50vw;
+            height: 40vh;
+            background-color: #eee;
+            flex-wrap: wrap;
+
+            margin-bottom: 40px;
+        }
+
+        .name-element {
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(199, 199, 255);
+            border-radius: 5px;
+        }
+
+        .delete-element {
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgb(255, 199, 199);
+            border-radius: 5px;
+        }
+
+        .button-delete {
+            font-size: 40px;
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color linear 300ms, color linear 300ms;
+        }
+
+            .button-delete:hover {
+                background-color: black;
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+
+    <div class="delete-container">
+    </div>
+
+    <button class="button-delete">Delete random name</button>
+
+    <script>
+        function randomInteger(min, max) {
+            let rand = min + Math.random() * (max + 1 - min);
+            return Math.floor(rand);
+        }
+
+        let container = document.querySelector('.container');
+        let deleteContainer = document.querySelector('.delete-container');
+        let deleteButton = document.querySelector('.button-delete');
+
+        let names = ['Иван', 'Максим', 'Сергей', 'Василий', 'Петр', 'Дмитрий'];
+
+        function renderNames () {
+            names.map(elem => {
+                container.append(createElement(elem, 'name-element'))
+            })
+        }
+        
+        renderNames();
+
+        function createElement (elem, classes) {
+            let spanEl = document.createElement('span');
+            spanEl.className = classes;
+            spanEl.innerText = `${elem}`;
+            return spanEl;
+        }
+
+        function deleteArrayElement (arr, i) {
+            return arr = [...arr.slice(0, i), ...arr.slice(i + 1)];
+        }
+
+        deleteButton.addEventListener('click', () => {
+            if (names.length !== 0) {
+                let temp = randomInteger(0, names.length - 1);
+                deleteContainer.append(createElement(names[temp], 'delete-element'));
+
+                names = deleteArrayElement(names, temp);
+                container.childNodes[temp + 1].remove();
+            }
+        })
+    </script>
+</body>
+</html>

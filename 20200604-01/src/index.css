@@ -1,0 +1,60 @@
+.App {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  height: 40vh;
+  background-color: #eee;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+}
+
+.delete-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  height: 40vh;
+  background-color: #eee;
+  flex-wrap: wrap;
+
+  margin-bottom: 40px;
+}
+
+.name-element {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgb(199, 199, 255);
+  border-radius: 5px;
+}
+
+.delete-element {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgb(255, 199, 199);
+  border-radius: 5px;
+}
+
+.button-delete {
+  font-size: 40px;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color linear 300ms, color linear 300ms;
+}
+
+  .button-delete:hover {
+      background-color: black;
+      color: #fff;
+  }
