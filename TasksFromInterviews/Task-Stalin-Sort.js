@@ -1,13 +1,17 @@
+let array = [9, 8, 7, 6, 5]
+
 function StalinSort (arr) {
-  let count = 0;
   for (let i = 1; i < arr.length; i++) {
+    console.log(`arr[i]: ${arr[i]}`)
     if (arr[i] < arr[i-1]) {
-      count += 1;
+      arr.splice(i, 1)
+      i -= 1
     }
+    console.log(`arr: ${arr}`)
+    console.log('-----------------')
   }
-  console.log(`count: ${count}`);
-  console.log(arr.sort((a, b) => a >= b ? 1 : -1));
 
 }
 
-StalinSort([1, 2, 6, 3, 0, 11])
+StalinSort(array)
+console.log(array)
