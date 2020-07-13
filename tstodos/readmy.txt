@@ -1,0 +1,7 @@
+Запуск приложения : разделить окно терминала на 2 части :
+
+1) npx webpack --mode=development --watch
+
+2) npm start
+или
+    live-server

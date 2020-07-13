@@ -1,0 +1,21 @@
+{
+  "name": "tstodos",
+  "version": "1.0.0",
+  "description": "TodosCTyprScript TODOs test",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=8000",
+    "dev": "webpack --mode=development --watch",
+    "build": "webpack --mode=production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "es6-promise": "^4.2.8",
+    "live-server": "^1.2.1",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  }
+}
