@@ -1,0 +1,33 @@
+//@import 'h1';
+//@import 'hr';
+
+$witch-avatar : 10%;
+$witch-block : 40%;
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+  .content__user {
+    display: flex;
+  }
+  .content__login {
+    width: $witch-block;
+    height: auto;
+    text-align: center;
+  }
+
+  .content__avatar {
+    width: $witch-avatar;
+    height: auto;
+    margin: 1vw 6vw;
+  }
+  .content__link {
+    width: $witch-block;
+    height: auto;
+  }

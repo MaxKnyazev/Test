@@ -1,0 +1,42 @@
+/*@import 'header.css';*/
+
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.box {*/
+/*    width: 600px;*/
+/*    margin: 0 auto;*/
+/*    min-height: 200px;*/
+/*    border: 4px solid darkred;*/
+/*}*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.content__user {
+  display: flex; }
+
+.content__login {
+  width: 40%;
+  height: auto;
+  text-align: center; }
+
+.content__avatar {
+  width: 10%;
+  height: auto;
+  margin: 1vw 6vw; }
+
+.content__link {
+  width: 40%;
+  height: auto; }
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY3NzL2luZGV4LmNzcyIsIndlYnBhY2s6Ly8vLi9zcmMvc2Nzcy9pbmRleC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLHVCQUF1Qjs7QUFFdkIsS0FBSztBQUNMLGdCQUFnQjtBQUNoQixpQkFBaUI7QUFDakIsNkJBQTZCO0FBQzdCLEdBQUc7O0FBRUgsUUFBUTtBQUNSLG1CQUFtQjtBQUNuQixxQkFBcUI7QUFDckIsd0JBQXdCO0FBQ3hCLGdDQUFnQztBQUNoQyxHQUFHLEU7QUNiSDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFlBQVk7O0FBRVo7QUFDQSxnQkFBZ0I7O0FBRWhCO0FBQ0E7QUFDQTtBQUNBLHFCQUFxQjs7QUFFckI7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCOztBQUVsQjtBQUNBO0FBQ0EsZUFBZSIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKkBpbXBvcnQgJ2hlYWRlci5jc3MnOyovXHJcblxyXG4vKiogeyovXHJcbi8qICAgIG1hcmdpbjogMDsqL1xyXG4vKiAgICBwYWRkaW5nOiAwOyovXHJcbi8qICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7Ki9cclxuLyp9Ki9cclxuXHJcbi8qLmJveCB7Ki9cclxuLyogICAgd2lkdGg6IDYwMHB4OyovXHJcbi8qICAgIG1hcmdpbjogMCBhdXRvOyovXHJcbi8qICAgIG1pbi1oZWlnaHQ6IDIwMHB4OyovXHJcbi8qICAgIGJvcmRlcjogNHB4IHNvbGlkIGRhcmtyZWQ7Ki9cclxuLyp9Ki8iLCIuY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7IH1cblxuLmNvbnRlbnRfX3VzZXIge1xuICBkaXNwbGF5OiBmbGV4OyB9XG5cbi5jb250ZW50X19sb2dpbiB7XG4gIHdpZHRoOiA0MCU7XG4gIGhlaWdodDogYXV0bztcbiAgdGV4dC1hbGlnbjogY2VudGVyOyB9XG5cbi5jb250ZW50X19hdmF0YXIge1xuICB3aWR0aDogMTAlO1xuICBoZWlnaHQ6IGF1dG87XG4gIG1hcmdpbjogMXZ3IDZ2dzsgfVxuXG4uY29udGVudF9fbGluayB7XG4gIHdpZHRoOiA0MCU7XG4gIGhlaWdodDogYXV0bzsgfVxuIl0sInNvdXJjZVJvb3QiOiIifQ==*/
