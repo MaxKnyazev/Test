@@ -4,9 +4,91 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
+    <title>Test async/await</title>
+
+    <style>
+      .title {
+        color: black;
+        transition: all 1000ms linear;
+        animation: bounce 2s 5 ease-in-out;
+      }
+
+      @keyframes bounce {
+       from {
+         width: 600px;
+         animation-timing-function: ease-out;
+       }
+       25% {
+         width: 300px;
+         animation-timing-function: ease-in;
+       }
+       50% {
+         width: 100px;
+         animation-timing-function: ease-out;
+       }
+       75% {
+         width: 300px;
+         animation-timing-function: ease-in;
+       }
+       to {
+         width: 600px;
+       }
+      }
+
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <h1 class="title">Test async/await</h1>
+
+    <script>
+  
+      const title = document.querySelector('.title');
+
+      const delay = ms => new Promise ((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, ms)
+      })
+      
+      const fn1 = () => {
+          console.log('run fn1');
+          title.style.backgroundColor = 'yellow';
+          title.style.color = 'black';
+          title.style.marginTop = '100px';
+        }
+
+      const fn2 = () => {
+        console.log('run fn2');
+        title.style.backgroundColor = 'red';
+        title.style.color = 'white';
+        title.style.marginTop = '0';
+      }
+
+      const asyncFn = async function () {
+        try {
+          await delay(2000);
+          title.style.color = 'red';
+          title.style.backgroundColor = '#eeeeee';
+          await console.log('after 2000 ms');
+          await delay(2000);
+          title.style.color = 'blue';
+          await console.log('after 2000 ms');
+          await delay(2000);
+          await fn1();
+          await console.log('after fn1 2000 ms');
+          await delay(2000);
+          await fn2();
+          await console.log('after fn2 2000 ms');
+        } catch (error) {
+          console.log(error)
+        } finally {
+          console.log('finally')
+        }
+      }
+
+      asyncFn();
+
+    </script>
   </body>
 </html>
